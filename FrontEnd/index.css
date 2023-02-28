@@ -178,4 +178,7 @@ td:last-child {
   .content th {
     font-size: 0.5rem;
   }
+  .brand {
+    margin: auto;
+  }
 }
