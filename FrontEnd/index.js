@@ -1,13 +1,12 @@
 const fullUrl = 'http://localhost:8000/get-data';
 fetch(fullUrl)
     .then(response => response.json())
-    .then(data => start(data.data))
+    .then(data => fillData(data.data))
     .catch(error => console.error(error));
 
-function start(data) {
-    fillData(data)
-    changeTheme();
-}
+changeTheme();
+update();
+
 function fillData(data) {
     let container = document.getElementById("tofill");
     let code = "";
@@ -43,4 +42,13 @@ function changeTheme() {
         }
     })
 
+}
+function update() {
+    setInterval(() => {
+        console.log("updating...");
+        fetch(fullUrl)
+            .then(response => response.json())
+            .then(data => fillData(data.data))
+            .catch(error => console.error(error));
+    }, 10000)
 }
