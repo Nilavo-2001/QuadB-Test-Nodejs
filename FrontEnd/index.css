@@ -106,12 +106,10 @@ input:checked + .slider:before {
 }
 
 /* css for content */
-.content {
-  padding: 20px;
-}
 table {
   border-collapse: separate;
   border-spacing: 0 1em;
+  padding: 20px;
 }
 table tbody tr {
   background-color: var(--row-background);
@@ -151,7 +149,6 @@ td:last-child {
   .header {
     flex-direction: column;
     align-items: center;
-    padding-left: 15px;
   }
   .header .brand .display-5 {
     font-size: 4.5rem;
@@ -166,9 +163,6 @@ td:last-child {
   }
 }
 @media (max-width: 565px) {
-  .brand {
-    padding-left: 30px;
-  }
   .header .brand .display-5 {
     font-size: 3.5rem;
   }
@@ -178,15 +172,8 @@ td:last-child {
   }
 }
 @media (max-width: 400px) {
-  .brand {
-    padding-left: 0px !important;
-  }
   .header .brand .display-5 {
     font-size: 3.5rem;
-  }
-
-  .content {
-    padding-left: 3.5px;
   }
   .content th {
     font-size: 0.5rem;
