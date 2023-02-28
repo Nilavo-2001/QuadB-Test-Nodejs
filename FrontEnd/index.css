@@ -1,9 +1,15 @@
+:root {
+  --background-color: #191d28;
+  --text-color: white;
+  --row-background: #2e3241;
+  --table-heading: #676971;
+}
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background-color: #191d28;
+  background-color: var(--background-color);
 }
 /* css for header */
 .header {
@@ -18,7 +24,7 @@ body {
   color: #6ccacb;
 }
 .brand .display-6 {
-  color: white;
+  color: var(--text-color);
 }
 .inr-btc-buttons {
   width: 12%;
@@ -29,6 +35,10 @@ body {
   margin-right: 5px;
   margin-bottom: 5px;
 }
+.tele-toggle {
+  margin-left: 8%;
+}
+
 .telelogo img {
   width: 30px;
   margin-right: 5px;
@@ -104,8 +114,8 @@ table {
   border-spacing: 0 1em;
 }
 table tbody tr {
-  background-color: #2e3241;
-  color: white;
+  background-color: var(--row-background);
+  color: var(--text-color);
   font-size: 1.5rem;
 }
 
@@ -114,7 +124,7 @@ th {
   font-size: 1.8rem;
 }
 thead th {
-  color: #676971;
+  color: var(--table-heading);
 }
 td:last-child {
   border-radius: 0 10px 10px 0;
@@ -124,8 +134,11 @@ td:last-child {
   .inr-btc-buttons {
     flex-direction: column;
   }
+  .tele-toggle {
+    margin-left: 0;
+  }
 }
-@media (max-width: 679px) {
+@media (max-width: 816px) {
   .inr-btc-buttons {
     font-size: smaller;
     flex-direction: row;
@@ -152,15 +165,30 @@ td:last-child {
     margin-right: 5px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 565px) {
   .brand {
     padding-left: 30px;
   }
   .header .brand .display-5 {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
   }
   .content tr,
   th {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 400px) {
+  .brand {
+    padding-left: 0px !important;
+  }
+  .header .brand .display-5 {
+    font-size: 3.5rem;
+  }
+
+  .content {
+    padding-left: 3.5px;
+  }
+  .content th {
+    font-size: 0.5rem;
   }
 }
