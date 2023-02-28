@@ -14,7 +14,3 @@ How to Use:
 6. To start the server : node index.js
 7. Wait for the server to start running.
 8. Open the index.html file in FrontEnd folder to view the data.
-
-Design:
-
-1. 127.0.0.1*5500*(iPhone XR).png
